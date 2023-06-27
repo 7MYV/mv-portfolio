@@ -1,0 +1,91 @@
+/* waving hand */
+
+.waving-hand {
+    animation-name: wave-animation;  
+    animation-duration: 2s;        
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(4.0deg) } 
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(4.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* arrow */
+
+.arrow {
+    width: 20px;
+    margin-bottom: 10px;
+    animation: animate 1s ease-in-out infinite;
+}
+
+@keyframes animate {
+    from{
+        transform: translateY(8px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(8px);
+    }
+}
+
+/* blurred-circles */
+
+.top-circle-1, .top-circle-2 {
+    position: absolute;
+}
+
+.circle {
+    opacity: 0.4;
+}
+
+.top-circle-2, .bottom-circle-2 {
+    height: 450px;
+    width: 450px;
+    background-color: #e03f3f5e;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    filter: blur(140px);
+    z-index: -9;
+    animation: mover2 2s infinite alternate;
+}
+.top-circle-1, .bottom-circle-1 {
+    height: 450px;
+    width: 450px;
+    background-color: #4e71e69c;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    filter: blur(160px);
+    z-index: -9;
+    animation: mover 2s infinite alternate;
+}
+
+.bottom-circle-2 {
+    top: -140px;
+}
+
+
+@keyframes mover {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(-80px); }
+}
+@keyframes mover2 {
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(-180px); }
+}
+

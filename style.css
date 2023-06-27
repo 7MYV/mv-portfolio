@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Montserrat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/clash-display');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue:#455cc2e3;
+    --gray:#2b2b33d8;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'clash display';
+}
+
+body {
+    position: relative;
+}
+
+p {
+    font-family: 'Inter';
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+
+/* LANDING PAGE */
+
+#landing-page {
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 30px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--blue);
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.burger-menu {
+    width: 40px;
+    height: 20px;
+    z-index: 201;
+}
+
+.bar {
+    width: 35px;
+    height: 3px;
+    background-color: rgba(37, 35, 35, 0.774);
+    margin-bottom: 5px;
+    border-radius: 50px;
+    transition: 0.1s;
+}
+
+.burger-menu.active #bar1 {
+    transform: translateY(8px) rotate(45deg);
+}
+.burger-menu.active #bar2 {
+    transition: 0.1s;
+    opacity: 0;
+}
+.burger-menu.active #bar3 {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+nav {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    width: 98%;
+    height: 60vh;
+    top:100px;
+    
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 1;
+    transform: scale(0.2);
+    transition: 0.3s;
+}
+
+nav::after {
+    position: absolute;
+    content: '';
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right:20px solid rgb(255, 255, 255);
+    top: -20px;
+    right: 0;
+}
+
+nav.active {
+    opacity: 1;
+    transform: scale(1);
+} 
+
+ul {
+    z-index: 201;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+li {
+    list-style-type: none;
+    
+}
+
+li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gray);
+    z-index: 201;
+    font-size: 32px;
+    transition: 0.2s;
+}
+
+li a:hover {
+    color: var(--blue);
+}
+
+
+/* hero-section */
+
+.hero-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.waving-hand {
+    width: 40px;
+    margin-left: 5px;
+}
+
+h1 {
+    font-size: 41px;
+    color: var(--gray);
+    line-height: 36px;
+}
+
+.desc {
+    margin-top: 20px;
+    color: #2b2b33e7;
+    max-width: 360px;
+}
+
+.bold {
+    font-weight: bold;
+    font-family: 'Inter';
+}
+
+
+.myname {
+    font-family: 'clash display';
+    font-size: 52.5px;
+}
+
+.light {
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+#enjoy-text {
+    color: var(--blue);
+    font-weight: 900;
+    font-family: 'Inter';
+}
+
+.selected-work {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    text-align: center;
+}
+
+.arrow {
+    width: 20px;
+}
+
+.selected-text {
+    color: var(--gray);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* MAIN */
+
+.img-container {
+    overflow: hidden;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+.img-container img{
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+
+.img-container img:hover{
+    transform: scale(1.03);
+} 
+
+.about-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.project-title {
+    font-size: 24px;
+    color: rgb(37, 37, 37);
+}
+
+.project-text a {
+    font-weight: bold;
+    
+    transition: 0.4s;
+}
+
+.project-text {
+    max-width: 450px;
+}
+
+.project-text a:hover {
+    color: rgba(29, 27, 27, 0.747);
+    font-weight: bold;
+}
+
+.visit {
+    font-family: 'clash display';
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    word-spacing: 2px;
+    position: relative;
+    font-size: 20px;
+}
+
+.visit::after {
+    position: absolute;
+    content: '';
+    width: 95%;
+    background-color: var(--blue);
+    height: 7px;
+
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    opacity: 0.3;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.visit:hover::after {
+    opacity: 0.5;
+}
+
+/* CONTACT */
+
+.contact {
+    display: grid;
+    place-content: center;
+    padding: 120px;
+    position: relative;
+}
+
+.sayhi {
+    display: flex;
+    align-items:last baseline;
+}
+
+.sayhi .waving-hand {
+    width: 28px;
+}
+
+h5 {
+    font-size: 18px;
+    color: #2b2b3381;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 28px;
+    font-family: 'clash display';
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+h3:hover {
+    transform: rotate(-3deg);
+    color: #2b2b33c7;
+}
+
+/* FOOTER */
+
+footer {    
+    position: relative;
+    
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+    height: 100px;
+
+}
+
+.developed {
+    font-size: 12.5px;
+    margin-bottom: 10px;
+    font-family: 'Inter';
+}
+
+.logo.l-footer {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width:800px) {
+
+    .circle {
+        opacity: 0.8;
+    }
+
+    /* HEADER 800*/
+
+    nav {
+        all: unset;
+        display: flex;
+    }
+
+    nav::after {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: row;
+        padding: 0;
+        gap: 40px;
+    }
+    li a {
+        cursor: pointer;
+        color: #2b2b33;
+        font-size: 20px;
+    }
+
+    li a:hover {
+        color: rgba(0, 0, 0, 0.562);
+    }
+
+    /* HERO SECTION 800*/
+
+    h1 {
+        font-size: 60px;
+        line-height: 56px;
+    }
+
+    .waving-hand {
+        width: 56px;
+        margin-left: 10px;
+    }
+
+    .myname {
+        font-size: 75px;
+        letter-spacing: 1px;
+    }
+
+    .desc {
+        font-size: 18px;
+        max-width: 620px;
+    }
+
+    /* FOOTER 800 */
+
+    .container-footer {
+        margin: 0 60px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo.l-footer {
+        padding: 0;
+        margin: 0;
+    }
+
+    .developed {
+        margin: 0;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+
+    /* HEADER 1200*/
+
+    header {
+        margin: 20px 60px;
+    }
+
+    #landing-page .logo {
+        font-size: 46px;
+    }
+
+    /* HERO SECTION 1200 */
+
+    .selected-work {
+        left: 60px;
+        bottom: 50px;
+        text-align: left;
+    }
+
+
+    /* MAIN 1200*/
+    
+    .project-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .img-container {
+        border: 1px solid black;
+    }
+
+    .about-content {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .revert {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    /* CONTACT SECTION 1200 */
+
+    .contact {
+        margin-top: 120px;
+       }
+    h3 {
+        font-size: 46px;
+        line-height: 42px;
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+    header {
+        margin: 30px 100px;
+    }
+
+    .selected-work {
+        left: 100px;
+        bottom: 60px;
+        text-align: left;
+    }
+}
