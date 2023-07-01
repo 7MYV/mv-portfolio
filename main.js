@@ -15,3 +15,6 @@ navLinks.forEach(link => {
         nav.classList.remove("active")
     })
 })
+
+ScrollReveal().reveal('.img-container', {delay:100, scale:1.09, easing: "ease-out", duration: 400});
+ScrollReveal().reveal('.about-content', {delay:250, scale:0.6, easing: "ease-out", duration: 900});
