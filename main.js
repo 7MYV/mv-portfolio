@@ -16,5 +16,5 @@ navLinks.forEach(link => {
     })
 })
 
-ScrollReveal().reveal('.img-container', {delay:300, scale:1.09, easing: "ease-out", duration: 400});
-ScrollReveal().reveal('.about-content', {delay:350, scale:0.6, easing: "ease-out", duration: 600});
+ScrollReveal().reveal('.img-container', {delay:200, scale:1.09, easing: "ease-out", duration: 600});
+ScrollReveal().reveal('.about-content', {delay:300, scale:0.6, easing: "ease-out", duration: 600});
