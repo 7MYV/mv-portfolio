@@ -22,6 +22,7 @@ html {
 
 body {
     position: relative;
+    background-image: url(./images/bg-grain.png);   
     overflow-x: hidden;
 }
 
